@@ -5,9 +5,9 @@ import dataclasses
 
 @dataclasses.dataclass
 class BaseRedis:
-    db: int
-    host: str
-    port: int
+    db: int = 0
+    host: str = "localhost"
+    port: int = 6379
     _conn: redis.Redis|None = None
 
     @property
